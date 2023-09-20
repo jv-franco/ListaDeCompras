@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url("../images/supermercado.jpg");
+  background-size: cover;
+  height: 98vh;
+  padding: 30px;
+}
+
+.app {
+  background-color: #ffffff;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.main-container {
+  height: 98vh;
+}
+
+h1 {
+  @apply text-center text-3xl font-bold mb-5;
+}
+
+.content {
+  @apply w-6/12 my-1  font-semibold;
+}
+
+.todo {
+  @apply my-4 border-b-2 flex  items-center justify-center gap-8;
+}
+
+.name {
+}
+
+.category {
+  @apply text-xs;
+}
+
+input {
+  @apply border mb-2;
+  box-sizing: border-box;
+}
+
+.isCompleted {
+  @apply border w-8;
+}
+
+form {
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+.search {
+  @apply pt-3;
+}
+
+.filter {
+  @apply py-3 flex flex-col items-center justify-center border-b-4 pb-8;
+}
+
+.filter_options {
+  @apply flex items-center w-full justify-evenly;
 }
