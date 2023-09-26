@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 body {
+  @apply md:px-8 px-1 py-8;
   background-image: url("../images/supermercado.jpg");
   background-size: cover;
   height: 98vh;
-  padding: 30px;
 }
 
 .app {
+  @apply md:px-5 px-2  py-8;
   background-color: #ffffff;
   margin: 0 auto;
   max-width: 600px;
-  padding: 20px 30px;
   border-radius: 10px;
 }
 
@@ -30,7 +30,7 @@ h1 {
 }
 
 .todo {
-  @apply my-4 border-b-2 flex  items-center justify-center gap-8;
+  @apply w-full my-4 border-b-2 flex  items-center justify-center md:gap-8 sm:gap-3 gap-0;
 }
 
 .name {
@@ -57,7 +57,7 @@ h2 {
 }
 
 .search {
-  @apply pt-3;
+  @apply text-center pt-3;
 }
 
 .filter {
@@ -65,5 +65,5 @@ h2 {
 }
 
 .filter_options {
-  @apply flex items-center w-full justify-evenly;
+  @apply flex sm:flex-row flex-col items-center w-full justify-evenly;
 }
